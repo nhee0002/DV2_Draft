@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "stacked area chart - total production",
+  "width": 800,
+  "height": 250,
+  "title": "Chart Title",
+  "config": {
+    "title": {
+      "fontSize": 18
+    }
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/nhee0002/DV2_Draft/main/data/top_producers.csv"
+  },
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "Year",
+      "title": "Year",
+      "type": "temporal",
+      "axis": { "format": "%Y" }
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "Qty",
+      "title": "Total Production (million kg)",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Group",
+      "type": "nominal",
+      "legend": {
+        "direction": "horizontal",
+        "orient": "none",
+        "legendX": 300,
+        "legendY": 290,
+        "title": ""
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Group",
+        "type": "nominal"
+      },
+      {
+        "field": "Qty",
+        "aggregate": "sum",
+        "type": "quantitative",
+        "title": "Production (million kg)",
+        "format": ".2f"
+      },
+      {
+        "timeUnit": "year",
+        "field": "Year",
+        "title": "Year",
+        "type": "temporal"
+      }
+    ]
+  }
+}
