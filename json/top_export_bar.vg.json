@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top exports",
+  "title": "Chart Title",
+  "width": 350,
+  "height": 300,
+  "data": { "url": "https://raw.githubusercontent.com/nhee0002/DV2_Draft/main/data/final_coffee_exports.csv" },
+  "mark": { "type": "bar", "color": "#CDBCAF" },
+  "encoding": {
+    "y": { "field": "Country", "type": "nominal", "sort": "-x", "title": "Exporter" },
+    "x": {
+      "aggregate": "sum",
+      "field": "Total_Export",
+      "type": "quantitative",
+      "title": "Total Exports (million kg)",
+      "axis": {
+        "domainOpacity": 0.8,
+        "tickCount": 10,
+        "tickOpacity": 0.5,
+        "labelOpacity": 0.8,
+        "tickWidth": 0.8
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Country",
+        "type": "nominal"
+      },
+      {
+        "field": "Total_Export",
+        "type": "quantitative",
+        "title": "Total Exports (million kg)",
+        "format": ".0f"
+      }
+    ]
+  }
+}
