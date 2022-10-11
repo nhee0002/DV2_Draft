@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top Imports",
+  "title": "Chart Title",
+  "width": 300,
+  "height": 300,
+  "data": { "url": "https://raw.githubusercontent.com/nhee0002/DV2_Draft/main/data/final_coffee_imports.csv" },
+  "mark": { "type": "bar", "color": "#CDBCAF" },
+  "encoding": {
+    "y": { "field": "Country", "type": "nominal", "sort": "-x", "title":"Importer" },
+    "x": {
+      "aggregate": "sum",
+      "field": "TotalImport",
+      "type": "quantitative",
+      "title": "Total Imports (million kg)",
+      "axis": {
+        "domainOpacity": 0.8,
+        "tickCount": 10,
+        "tickOpacity": 0.5,
+        "labelOpacity": 0.8,
+        "tickWidth": 0.8
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Country",
+        "type": "nominal"
+      },
+      {
+        "field": "TotalImport",
+        "type": "quantitative",
+        "title": "Total Imports (million kg)",
+        "format": ".0f"
+      }
+    ]
+  }
+}
