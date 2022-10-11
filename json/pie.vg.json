@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple pie chart with embedded data.",
+  "width": 300,
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
+  "data": {
+    "values": [
+      { "Bean Type": "Arabia", "value": 60 },
+      { "Bean Type": "Other", "value": 40 }
+    ]
+  },
+  "mark": "arc",
+  "encoding": {
+    "theta": { "field": "value", "type": "quantitative" },
+    "color": {
+      "field": "Bean Type",
+      "type": "nominal",
+      "scale": { "range": ["#CDBCAF", "#F3EDE6"] },
+      "legend": {
+        "titleAlign": "center",
+        "orient": "none",
+        "legendX": 280,
+        "legendY": 60
+      }
+    }
+  }
+}
