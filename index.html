@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="vega_lite_vis.js"></script>
+
+    <title>Coffee Data Visualisation</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/styles.css"
+      media="all"
+    />
+  </head>
+  <body>
+    <!-- heading section -->
+    <div class="heading-sect main">
+      <h1>COFFEE DATA VISUALISATION</h1>
+      <div class="rename1">
+          <p style="text-align: center;"> 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna 
+              aliqua. Fringilla ut morbi tincidunt augue interdum velit. 
+              Felis donec et odio pellentesque. In arcu cursus euismod quis 
+              viverra.
+          </p>
+      </div>
+    </div>
+    <!-- Main -->
+    <div class="main">
+      <div class="body">
+        <!-- world map section -->
+        <div class="body-grid">
+          <div style="width: 100%;">
+            <h2>World Coffee Production</h2>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Fringilla ut morbi tincidunt augue interdum velit. 
+            Felis donec et odio pellentesque. In arcu cursus euismod quis 
+            viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Fringilla ut morbi tincidunt augue interdum velit. 
+            Felis donec et odio pellentesque. In arcu cursus euismod quis 
+            viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Fringilla ut morbi tincidunt augue interdum velit. 
+            Felis donec et odio pellentesque. In arcu cursus euismod quis 
+            viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. 
+          </p>
+          <div id="week9_map"></div>
+        </div>
+        <!-- production area chart -->
+        <div class="body-grid">
+          <div style="width: 100%;">
+            <h2>Production Stacked Area Chart</h2>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Fringilla ut morbi tincidunt augue interdum velit. 
+            Felis donec et odio pellentesque. In arcu cursus euismod quis 
+            viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Fringilla ut morbi tincidunt augue interdum velit. 
+            Felis donec et odio pellentesque. In arcu cursus euismod quis 
+            viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Fringilla ut morbi tincidunt augue interdum velit. 
+            Felis donec et odio pellentesque. In arcu cursus euismod quis 
+            viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. 
+          </p>
+          <!-- <div class="chart-placeholder" style="height: 400px"></div> -->
+          <div id="prod_stacked_area"></div>
+        </div>
+        <!-- imports and exports -->
+        <div class="body-grid">
+          <div style="width: 100%;">
+            <h2>Coffee Bean Imports and Exports</h2>
+          </div>
+          <div class="body-col">
+            <div class="column" style="width: 45%;">
+              <div id="import_bar"></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua.
+              </p>
+              <!-- <div class="chart-placeholder" style="height: 200px"></div> -->
+            </div>
+            <div class="column" style="width: 45%;">
+              <div id="export_bar"></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua.
+              </p>
+              <!-- <div class="chart-placeholder" style="height: 200px"></div> -->
+            </div>
+
+          </div>
+        </div>
+        <!-- coffee bean quality and type -->
+        <div class="body-col" style="width: 100%;">
+          <div class="column" style="width: 48%;">
+            <div style="width: 100%;">
+              <h2>Coffee Bean Species</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna 
+              aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna 
+              aliqua.
+            </p>
+            <div id="pie_chart"></div>
+          </div>
+          <div class="column" style="width: 48%;">
+            <div style="width: 100%;">
+              <h2>Bean Quality</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna 
+              aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna 
+              aliqua.
+            </p>
+            <div id="radar_map1"></div>
+          </div>  
+        </div>  
+      </div>
+      <!-- footer section -->
+      <div class="footer-wrapper">
+        <div class="footer-sect" > 
+          <div >
+            Data Source: Lorem Ipsum
+        </div>
+        <div style="text-align: right;">
+            FIT3179 Data Vsiualisation 2, Naomi He 
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
